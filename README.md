@@ -1,2 +1,0 @@
-# tutorinsa
-Code source tutorinsa
