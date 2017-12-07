@@ -1,0 +1,105 @@
+#butt{
+	color:white;
+	background-color:#9A1616;
+}
+body{
+	background-color:#d7ccc8;;
+}
+.container{
+	width:90%;
+}
+#pseudo{
+	font-size:1.4em;
+}
+.insa
+{
+	background-color:#9A1616;
+}
+#page{
+	padding:2% 2%;
+}
+footer{
+	color:black;
+	text-align:center;
+	height :30px;
+}
+#header
+{
+	margin-bottom:0px;
+	padding :0;
+	background-clip:border-box;
+	background-size: cover;
+	background-position:top right;
+	background-origin:content-box;
+}
+#menu{
+	margin-top:0px;
+}
+.lienbutton{
+	margin-left:auto;
+	margin-right:auto;
+	margin-top:5px;
+}
+
+.justify
+{
+	text-align:justify;
+}
+table
+{
+	background-color:white;
+}
+th 
+{
+	padding : 10px 10px;
+	background-color:#046380;
+	font-weight:bold;
+	border:1px solid #000066;
+	color:white;
+}
+tr td{
+	padding: 10px 10px;
+}
+th a{
+	padding : 5px 5px;
+	background-color:#046380;
+	font-weight:bold;
+	color:white;
+
+}
+#liens
+{
+	font-size:1.3em;
+}
+.datatable-filter-line
+{
+	padding:10px 10px;
+	background-color:white;
+}
+.waves-insa
+{
+	background-color:rgba(154,22,22,0.65);
+}
+.tooltipped{
+	cursor:help;
+}
+.waves-insa:hover
+{
+	background-color:rgba(154,22,22,1);
+}
+#tech
+{
+	border-top:1px solid black;
+	padding-top: 15px;
+}
+
+.clickable{
+	cursor: pointer;
+}
+.pagination li{
+	cursor: pointer;
+	margin-left:2px;
+}
+.pagination li.active{
+	cursor: default;
+}
