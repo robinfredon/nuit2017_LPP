@@ -13,9 +13,9 @@ class CalendarDAO extends DAO{
 		$sql="SELECT * FROM calendar";
 		$req=$this->_db->prepare($sql);
 		if ($req->execute()){
-			$req->bind_result($id,$img,$ouvert,$date);
+			$req->bind_result($id,$nombre,$img,$ouvert,$date);
 			while ($req->fetch()){
-				$calendar=new Calendar($id,$img,$ouvert,$date);
+				$calendar=new Calendar($id,$nombre,$img,$ouvert,$date);
 				$zouz[]=$calendar;
 			}
 		}

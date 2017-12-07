@@ -1,9 +1,24 @@
 <?php
 $titre = "Calendrier de l'Avent";
-$corps=<<<EOT
-<div class='container-fluid'>
-	<div class='row'>
-		<div class="col s3 m3 l3">13</div>
+$u=URL_BASE."/public/images/";
+$corps="<div class='container-fluid'>";
+
+		$nbrCol=5;
+		foreach($data['donnees'] as $date)
+		{
+			$nbrCol++;
+			if($nbrCol>=5)
+			{
+				$corps .= "</div><div class='row'>";
+				$nbrCol=1;
+			}
+			$u=URL_BASE."/public/images/".$date->getImg();
+			$corps .= "<div class='col s3 m3 l3 case' style='background-image : url(".$u.");'></div>";
+		}
+		$corps .= "</div></div>";
+
+	/*<div class='row'>
+		<div class="col s3 m3 l3 " style="background-image : url($u);">13</div>
 		<div class="col s3 m3 l3">5</div>
 		<div class="col s3 m3 l3">19</div>
 		<div class="col s3 m3 l3">21</div>
@@ -37,9 +52,8 @@ $corps=<<<EOT
                 <div class="col s3 m3 l3">22</div>
                 <div class="col s3 m3 l3">4</div>
                 <div class="col s3 m3 l3">16</div>
-        </div>
-</div>
-EOT;
+        </div>*/
+$corps .= "</div>";
 
 require '../app/config/gabarit.php';
 ?>

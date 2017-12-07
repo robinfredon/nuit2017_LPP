@@ -6,19 +6,24 @@ class Calendar extends Persistable implements JsonAble{
 	// Persistable : id, getId, setId
 	// interface JsonAble : methode toJson()
 
+	private $nbr;
 	private $img;
 	private $ouvert;
 	private $date;
 
-	public function __construct($id=null,$img,$ouvert,$date){
+	public function __construct($id=null,$nombre,$img,$ouvert,$date){
 		if ($id){
 			$this->setId($id);
 		}
+		$this->nbr=$nombre;
 		$this->img=$img;
 		$this->ouvert=$ouvert;
 		$this->date=$date;
 	}
 
+	public function getNbr(){
+		return $this->nbr;
+	}
 	public function getImg(){
 		return $this->img;
 	}
