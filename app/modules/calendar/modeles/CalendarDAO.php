@@ -1,6 +1,6 @@
 <?php
 //Module Calendar
-
+// Calendar DAO
 class CalendarDAO extends DAO{
 	public function __construct(){
 		require_once 'Calendar.php';
