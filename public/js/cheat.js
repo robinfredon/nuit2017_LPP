@@ -3,8 +3,7 @@ if (window.addEventListener ) {
 	window.addEventListener("keydown", function(e){
 		kkeys.push( e.KeyCode );
 		if ( kkeys.toString().indexOf( konami ) >= 0) {
-			alert("Un jeu génial codé dans un mod'Ouv par Mr Toon19.");
-			window.location = "http://www.guilhem-cichocki.com/DNS/";
+			//NEED SOMETHING
 		}
 	},true);
 }
