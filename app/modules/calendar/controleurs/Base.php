@@ -2,22 +2,24 @@
 
 // Module : calendar
 
-require_once '../app/modules/calendar/modeles/UserDAO.php';
+require_once '../app/modules/calendar/modeles/CalendarDAO.php';
 
 //test
 class Base extends Controller
 {
     private $userDAO;
     private $user;
-        
+	private $calendar;
+	private $calendarDAO;        
     public function __construct(){
-		$this->userDAO = new UserDAO();
-        $this->user = new User(0,null,null,null, null, null,null,null, null, null, null);
+		$this->calendarDAO = new CalendarDAO();
+        $this->calendar = new Calendar(null,null,null, null);
     }
 
     public function accueil()
     {
-	    $this->view('calendar','accueil',array("donnees"=>""));
+		$data=$this->calendarDAO->findAllCalendar();
+	    $this->view('calendar','accueil',array("donnees"=>$data));
     }
 	public function perdu(){
 		$this->view('calendar','404',array("donnees"=>""));
