@@ -19,7 +19,7 @@ class Day extends Persistable implements JsonAble{
 		$this->text=$text;
 	}
 
-	public getIdCalendar(){
+	public function getIdCalendar(){
 		return $this->ID_calendar;
 	}
 	public function getCategory(){
