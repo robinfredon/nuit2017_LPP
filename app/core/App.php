@@ -3,7 +3,7 @@
 class App
 {
 	// valeurs par défaut
-	private $module = 'authentification';
+	private $module = 'calendar';
 	private $controller = 'Base';
 	private $method = 'accueil';
 	private $params = array();
@@ -23,8 +23,8 @@ class App
 			unset($url[0]);
         		unset($url[1]);
 		} else {
-                    // on continue avec les controleur/méthode par défaut
-	
+                // on continue avec les controleur/méthode par défaut
+				$method='perdu';
 		}
 
 		// nouvelle instance du controleur sélectionné
