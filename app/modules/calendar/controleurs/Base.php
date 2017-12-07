@@ -3,17 +3,19 @@
 // Module : calendar
 
 require_once '../app/modules/calendar/modeles/CalendarDAO.php';
+require_once '../app/modules/calendar/modeles/DayDAO.php';
 
-//test
 class Base extends Controller
 {
-    private $userDAO;
-    private $user;
 	private $calendar;
 	private $calendarDAO;        
-    public function __construct(){
+    private $day;
+	private $dayDAO;
+	public function __construct(){
 		$this->calendarDAO = new CalendarDAO();
         $this->calendar = new Calendar(null,null,null,null, null);
+		$this->dayDAO=new DayDAO();
+		$this->day=new Day(null,null,null,null);
     }
 
     public function accueil()
@@ -23,5 +25,10 @@ class Base extends Controller
     }
 	public function perdu(){
 		$this->view('calendar','404',array("donnees"=>""));
+	}
+
+	public function day($JourCalendar){
+		$data=$this->dayDAO->findDaysByCalendar($JourCalendar);
+		$this->view('calendar','day',array("donnees"=>$data));
 	}
 } 
