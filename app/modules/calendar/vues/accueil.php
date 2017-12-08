@@ -12,16 +12,16 @@ $corps="<div class='container-fluid'>";
 				$nbrCol=1;
 			}
 
-			if($date->get_date() <= date("Y-m-d"))
+/*			if($date->get_date() <= date("Y-m-d"))
 			{
-				$u=URL_BASE."/public/images/".$date->getImg();
+*/				$u=URL_BASE."/public/images/".$date->getImg();
 				$l=URL_BASE."/public/calendar/Base/day/".$date->getNbr();
-			}else{
+/*			}else{
 				$u=URL_BASE."/public/images/tn_cartman_noel.jpg";
 				$l="";
 			}
-
-			$corps .= "<a href='$l'><div class='col s3 m3 l3 case' style='background-image : url(";
+*/
+			$corps .= "<a href='$l'><div class='col s3 m3 l3 case_calendar' style='background-image : url(";
 			$corps .= $u.");'>". $date->getNbr() ."</div></a>";
 		}
 		$corps .= "</div></div>";

@@ -32,13 +32,15 @@ foreach ($data['donnees'] as $defi)
 			</div>";
 	}
 	elseif ($defi->getCategory()=='jeux'){
-		$corps.="<div class='row valign-wrapper'>
-			<div class='col s12 m12 l12'>
-				<canvas id='mycanv' width='853' height='480'>Canvas not supported</canvas>
+		$corps.="<div class='row'>
+			<!-- <div class='col s12 m7 l6'>
+				<canvas id='mycanv'>Canvas not supported</canvas>
+			</div> -->
 			</div>
-			</div>
+		<canvas id='dessin' width='640' height='480'></canvas>
 		<script src='".URL_BASE."/public/js/jcanvas.min.js'></script>
-		<script src='".URL_BASE."/public/js/rayman.js'></script>";
+		<script src='".URL_BASE."/public/js/game.js'></script>
+		";
 	}
 	$corps.="</div>";
 

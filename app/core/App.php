@@ -24,7 +24,7 @@ class App
         		unset($url[1]);
 		} else {
                 // on continue avec les controleur/méthode par défaut
-				$method='perdu';
+			
 		}
 
 		// nouvelle instance du controleur sélectionné
@@ -40,6 +40,7 @@ class App
 				$this->method = $url[2];
 				unset($url[2]);
 			}
+
 		}
 		// test d'existence de paramètres (valeurs restantes du tableau $url renvoyée sous forme
         	// de tableau indexé)
