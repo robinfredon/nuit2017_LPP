@@ -11,60 +11,42 @@ $corps="<div class='container-fluid'>";
 				$corps .= "</div><div class='row'>";
 				$nbrCol=1;
 			}
-
-/*			if($date->get_date() <= date("Y-m-d"))
-			{
-*/				$u=URL_BASE."/public/images/".$date->getImg();
-				$l=URL_BASE."/public/calendar/Base/day/".$date->getNbr();
-/*			}else{
-				$u=URL_BASE."/public/images/tn_cartman_noel.jpg";
-				$l="";
-			}
-*/
+			$u=URL_BASE."/public/images/".$date->getImg();
+			$l=URL_BASE."/public/calendar/Base/day/".$date->getNbr();
 			$corps .= "<a href='$l'><div class='col s3 m3 l3 case_calendar' style='background-image : url(";
 			$corps .= $u.");'>". $date->getNbr() ."</div></a>";
 		}
 		$corps .= "</div></div>";
-
-	/*<div class='row'>
-		<div class="col s3 m3 l3 " style="background-image : url($u);">13</div>
-		<div class="col s3 m3 l3">5</div>
-		<div class="col s3 m3 l3">19</div>
-		<div class="col s3 m3 l3">21</div>
-	</div>
-	<div class='row'>
-		<div class="col s3 m3 l3">20</div>
-		<div class="col s3 m3 l3">12</div>
-		<div class="col s3 m3 l3">14</div>
-		<div class="col s3 m3 l3">23</div>
-	</div>
-	<div class='row'>
-        	<div class="col s3 m3 l3">15</div>
-                <div class="col s3 m3 l3">6</div>
-                <div class="col s3 m3 l3">1</div>
-                <div class="col s3 m3 l3">18</div>
-        </div>
-        <div class='row'>
-                <div class="col s3 m3 l3">7</div>
-                <div class="col s3 m3 l3">10</div>
-                <div class="col s3 m3 l3">24</div>
-                <div class="col s3 m3 l3">3</div>
-        </div>
-        <div class='row'>
-                <div class="col s3 m3 l3">2</div>
-                <div class="col s3 m3 l3">17</div>
-                <div class="col s3 m3 l3">8</div>
-                <div class="col s3 m3 l3">11</div>
-	</div>
-        <div class='row'>
-                <div class="col s3 m3 l3">9</div>
-                <div class="col s3 m3 l3">22</div>
-                <div class="col s3 m3 l3">4</div>
-                <div class="col s3 m3 l3">16</div>
-        </div>*/
 $corps .= "</div>";
 
-$lienjs="<script src='".URL_BASE."/public/js/calendar.js'></script>";
+$lienjs=<<<EOT
+<script>
+function change(){
+	var couleur=['red','orange','yellow','green','blue','indigo','violet'];
+	var actu=document.body.style.backgroundColor;
+	var i=couleur.indexOf(actu);
+	var taille=couleur.length;
+	if (i==taille-1){
+		i=0;
+	}
+	else
+	{
+		i++;
+	}
+	document.body.style.backgroundColor=couleur[i];
+}
 
+
+if (window.addEventListener){
+	var kkeys=[], konami="38,38,40,40,37,39,37,39,66,65";
+	window.addEventListener("keydown",function(e){
+		kkeys.push(e.keyCode);
+		if (kkeys.toString().indexOf(konami) >=0){
+			setInterval(change(),3000);	
+		}
+	},true);
+}
+</script>
+EOT;
 require '../app/config/gabarit.php';
 ?>

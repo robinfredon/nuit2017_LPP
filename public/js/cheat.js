@@ -3,7 +3,7 @@ if (window.addEventListener ) {
 	window.addEventListener("keydown", function(e){
 		kkeys.push( e.KeyCode );
 		if ( kkeys.toString().indexOf( konami ) >= 0) {
-			//NEED SOMETHING
+			alert("OK");
 		}
 	},true);
 }

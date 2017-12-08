@@ -261,3 +261,10 @@ width:30%;
 	width:100px;
 	background-repeat:no-repeat;
 }
+
+.case_calendar{
+	max-width:95px;
+}
+.row > a{
+	max-width:95px;
+}

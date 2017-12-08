@@ -31,16 +31,13 @@ foreach ($data['donnees'] as $defi)
 			</audio>
 			</div>";
 	}
-	elseif ($defi->getCategory()=='jeux'){
+	elseif ($defi->getCategory()=='image'){
+		$imgurl=URL_BASE."/public/images/".$defi->get_Text();
 		$corps.="<div class='row'>
-			<!-- <div class='col s12 m7 l6'>
-				<canvas id='mycanv'>Canvas not supported</canvas>
-			</div> -->
-			</div>
-		<canvas id='dessin' width='640' height='480'></canvas>
-		<script src='".URL_BASE."/public/js/jcanvas.min.js'></script>
-		<script src='".URL_BASE."/public/js/game.js'></script>
-		";
+			 <div class='col s12 m7 l6'>
+				<img class='responsive-img' src='".$imgurl."'/>
+				</div> 
+			</div>";
 	}
 	$corps.="</div>";
 

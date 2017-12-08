@@ -24,7 +24,6 @@ class App
         		unset($url[1]);
 		} else {
                 // on continue avec les controleur/méthode par défaut
-			
 		}
 
 		// nouvelle instance du controleur sélectionné
@@ -39,6 +38,9 @@ class App
 			{
 				$this->method = $url[2];
 				unset($url[2]);
+			}
+			else
+			{
 			}
 
 		}
