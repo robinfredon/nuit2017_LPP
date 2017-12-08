@@ -27,8 +27,6 @@
         <input id="URL_PREFIX" type="hidden" value="<?php echo URL_PREFIX;?>"/>
 
         <!-- script js-->
-		<script src="<?php echo URL_BASE;?>/public/js/app.js"></script>  
-		<script type="text/javascript" src="<?php echo URL_BASE;?>/public/js/datatable.jquery.min.js"></script>
 	    <?php if(isset($lienjs)) echo $lienjs; ?>
         
 
