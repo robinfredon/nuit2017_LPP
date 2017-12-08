@@ -23,7 +23,7 @@ class DayDAO extends DAO{
 
 	public function findDaysByCalendar($JourCalendar){
 		$zouz=array();
-		$sql="SELECT D.id as id,D.ID_calendar as calendar,D.category as category, D.text as text FROM day D,calendar C WHERE D.ID_calendar=(SELECT DISTINCT ID FROM calendar WHERE nombre=?)";
+		$sql="SELECT D.id as id,D.ID_calendar as calendar,D.category as category, D.text as text FROM day D,calendar C WHERE D.ID_calendar=(SELECT ID FROM calendar WHERE nombre=?)";
 		$req=$this->_db->prepare($sql);
 		$req->bind_param("i",$JourCalendar);
 		if ($req->execute()){

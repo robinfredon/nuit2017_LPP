@@ -1,4 +1,5 @@
 <?php
+var_dump($data['donnees']);
 $titre="Calendrier de l'Avent";
 $corps="";
 foreach ($data['donnees'] as $defi)
