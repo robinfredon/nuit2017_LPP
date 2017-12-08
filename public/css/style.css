@@ -107,3 +107,7 @@ th a{
 	height:100px;
 	background-repeat:no-repeat;
 }
+.row{
+	margin-top: 20px;
+	margin-bottom: 0px;
+}

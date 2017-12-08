@@ -1,6 +1,5 @@
 <?php
 $titre = "Calendrier de l'Avent";
-$u=URL_BASE."/public/images/";
 $corps="<div class='container-fluid'>";
 
 		$nbrCol=5;
@@ -12,8 +11,18 @@ $corps="<div class='container-fluid'>";
 				$corps .= "</div><div class='row'>";
 				$nbrCol=1;
 			}
-			$u=URL_BASE."/public/images/".$date->getImg();
-			$corps .= "<div class='col s3 m3 l3 case' style='background-image : url(".$u.");'></div>";
+
+			if($date->get_date() <= date("Y-m-d"))
+			{
+				$u=URL_BASE."/public/images/".$date->getImg();
+				$l=URL_BASE."/public/calendar/Base/day/".$date->getNbr();
+			}else{
+				$u=URL_BASE."/public/images/tn_cartman_noel.jpg";
+				$l="";
+			}
+
+			$corps .= "<a href='$l'><div class='col s3 m3 l3 case' style='background-image : url(";
+			$corps .= $u.");'>". $date->getNbr() ."</div></a>";
 		}
 		$corps .= "</div></div>";
 
