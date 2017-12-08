@@ -55,7 +55,7 @@ $corps="<div class='container-fluid'>";
         </div>*/
 $corps .= "</div>";
 
-$lienjs="<script type='text/javascript' src='".URL_BASE."/public/js/calendar.js'></script>";
+$lienjs="<script src='".URL_BASE."/public/js/calendar.js'></script>";
 
 require '../app/config/gabarit.php';
 ?>
