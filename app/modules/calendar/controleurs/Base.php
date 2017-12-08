@@ -8,8 +8,8 @@ require_once '../app/modules/calendar/modeles/DayDAO.php';
 class Base extends Controller
 {
 	private $calendar;
-	private $calendarDAO;        
-    private $day;
+	private $calendarDAO;
+        private $day;
 	private $dayDAO;
 	public function __construct(){
 		$this->calendarDAO = new CalendarDAO();
